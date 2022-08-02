@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    Laura Rodríguez Castillo - My 1st vue project
+    Footer  Laura Rodríguez Castillo - My 1st vue project
   </footer>
 </template>
 
