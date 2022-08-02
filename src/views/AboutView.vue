@@ -9,10 +9,20 @@
       <a v-show="url" :href="url" :title="urlName" target="_blank">{{url }}</a>
     </p>
   </div>
+  <div class="about-me-vue-versions">
+      <MyComponent3/>
+      <MyComponent2/>
+  </div>
 </template>
 
 <script>
+import MyComponent3 from '@/components/MyComponent3.vue'
+import MyComponent2 from '@/components/MyComponent2.vue'
 export default {
+   components: {
+    MyComponent3,
+    MyComponent2,
+  },
   data() {
     return {
       name: "Laura",
@@ -23,7 +33,7 @@ export default {
   },
   methods: {
     helloWorld(redSocialNetwork){
-      console.log(redSocialNetwork);
+      //console.log(redSocialNetwork);
       if (redSocialNetwork ==="Twitter") {
         this.url="http://twitter.com/superpensando",
         this.urlName="Twitter"
@@ -64,6 +74,13 @@ export default {
       background-color: rgb(9, 9, 9);
     }
   }
+}
+
+.about-me-vue-versions {
+  display:flex;
+  justify-content: space-between;
+  padding:20px;
+  background-color: green-light;
 }
 
 
