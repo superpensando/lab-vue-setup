@@ -62,7 +62,7 @@ export default {
     color:white;
     background-color: green;
     &:hover {
-      font-size:102%;
+      background-color: rgb(9, 9, 9);
     }
   }
 }
