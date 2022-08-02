@@ -4,7 +4,19 @@
     <router-link to="/vue">Vue Information</router-link>
   </nav>
   <router-view/>
+  <MyFooter />
 </template>
+
+<script>
+import MyFooter from '@/components/MyFooter.vue'
+
+export default {
+  components: {
+    MyFooter,
+  }
+}
+</script>
+
 
 <style lang="scss">
 #app {
@@ -13,6 +25,8 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+   max-width:500px;
+   margin: 0 auto;
 }
 
 nav {

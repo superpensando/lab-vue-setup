@@ -9,7 +9,6 @@
       <a v-show="url" :href="url" :title="urlName" target="_blank">{{url }}</a>
     </p>
   </div>
-
 </template>
 
 <script>
