@@ -4,7 +4,7 @@
     <p>Hello! My name is <span>{{name}} {{surname}}</span></p>
     <p>You have more information about me clicking my Social Networks!</p>
     <p class="about-me__social-networks">
-      <span @click="helloWorld('Twitter')">Twitter</span> | <span @click="helloWorld('Linkedin')">Linkedin</span> 
+      <span @click="helloWorld(socialNetworkName1)">{{ socialNetworkName1}}</span> | <span @click="helloWorld(socialNetworkName2)">{{ socialNetworkName2}}</span> 
       <br/>
       <a v-show="url" :href="url" :title="urlName" target="_blank">{{url }}</a>
     </p>
@@ -28,13 +28,15 @@ export default {
       name: "Laura",
       surname:"Rodríguez Castillo",
       url:"",
-      urlName:"",   
+      urlName:"",  
+      socialNetworkName1:"Twitter",
+      socialNetworkName2:"Linkedin" 
     }
   },
   methods: {
     helloWorld(redSocialNetwork){
       //console.log(redSocialNetwork);
-      if (redSocialNetwork ==="Twitter") {
+      if (redSocialNetwork === this.socialNetworkName1) {
         this.url="http://twitter.com/superpensando",
         this.urlName="Twitter"
       } else {
